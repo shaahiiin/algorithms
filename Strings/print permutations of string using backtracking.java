@@ -9,15 +9,17 @@ class Main {
 	public static void main (String[] args) throws IOException{
 	    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	    int t = Integer.parseInt(br.readLine());
+	    // int t = 1;
 	    
 	    while(t-- > 0){
 	        String s = br.readLine();
-	        
+	        // String s = "ABC";
+
 	        char[] arr = s.toCharArray();
 	        Arrays.sort(arr);
 	        s = new String(arr);
 	        
-	        permuteString(s);
+	        permuteString(s, 0, s.length()-1);
 	        
 	    }
 
@@ -40,7 +42,7 @@ class Main {
 	    static String swap(String s, int i, int j){
 	    	StringBuilder sb = new StringBuilder(s);
 
-	    	temp = sb.charAt(i);
+	    	char temp = sb.charAt(i);
 	    	sb.setCharAt(i, sb.charAt(j));
 	    	sb.setCharAt(j, temp);
 
