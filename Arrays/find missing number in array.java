@@ -1,40 +1,37 @@
-// find missing number in unordered array of natural numbers 1 to n
-
-import java.io.*;
+// find missing number in an array containing values 1 -> n
+// 2 methods
 
 class Main{
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args){
+		int arr[] = {1,2,4,5,6};
+		int mis = getMissingNum(arr, 5);
+		int mis2 = getMissingNumXor(arr, 5);
 		
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-		int t = Integer.parseInt(br.readLine());
-
-		while(t-- > 0){
-			int n = Integer.parseInt(br.readLine());
-			int[] arr = new int[n-1];
-			String[] inStr = br.readLine().split(" ");
-			
-			for(int i = 0; i < n-1; i++){
-				arr[i] = Integer.parseInt(inStr[i]);
-			}
-
-			int ans = missingNum(arr);
-			
-			System.out.println(ans);
-		}
+		System.out.println(mis);
+		System.out.println(mis2);	// should output 3 for both prints
 	}
 
-	static int missingNum(int[] arr){
-		int x1 = 0, x2 = 0;
-
-		for(int i = 1; i <= arr.length + 1; i++){
-			x1 ^= i;
+	static int getMissingNum(int[] arr, int n){
+		int sum = ((n+1)*(n+2))/2;
+		for(int i = 0; i < n; i++){
+			sum -= arr[i];
 		}
+		return sum;
 
-		for(int i = 0; i < arr.length; i++){
-			x2 ^= arr[i];
+	}
+	static int getMissingNumXor(int[] arr, int n){
+		int xor1 = 0;
+		int xor2 = 0;
+
+		// xor of all array elements
+		for(int i = 0; i < n; i++){
+			xor1 ^= arr[i];
 		}
-
-		return x1^x2;
+		// xor of all nums from 1 to n+1
+		for(int i = 1; i <= n+1; i++){
+			xor2 ^= i;
+		}
+		
+		return xor1 ^ xor2;
 	}
 }
