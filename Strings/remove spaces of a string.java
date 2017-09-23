@@ -8,23 +8,16 @@ class Main{
 		System.out.println(removeSpaces(ss));
 	}
 
-	static String removeSpaces(String str){
-		char[] arr = str.toCharArray();
-		int idx = 0;
-		while(arr[idx] != ' '){
-			idx++;
-			if(idx == arr.length){
-			    return str;
-			}
-		}
-
-		for(int i = idx+1; i < arr.length; i++){
-			char ch = arr[i];
-			if(ch != ' '){
-				arr[idx] = ch;
-				idx++;
-			}
-		}
-		return new String(arr, 0, idx);
-	}
+	static String removeSpaces(String s){
+		char[] str = s.toCharArray();
+        int count = 0;
+        
+        for(int i = 0; i < str.length; i++){
+            if(str[i] != ' ')
+                str[count++] = str[i];
+        }
+        
+        String ans = new String(str, 0, count);
+        return ans;
+    }
 }
