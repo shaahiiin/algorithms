@@ -1,4 +1,4 @@
-Completed 28/176
+Completed 30/176
 
 Arrays :
 
@@ -23,7 +23,7 @@ Find the element that appears once in sorted array
 Kth largest element in a stream
 Relative Sorting
 Spirally traversing a matrix
-Sorting Elements of an Array by Frequency
+---Sorting Elements of an Array by Frequency
 Largest Number formed from an Array
 
 
@@ -38,8 +38,8 @@ Recursively remove all adjacent duplicates
 Check if string is rotated by two places
 Roman Number to Integer
 ---Anagram
-Longest Common Substring
-Remove Duplicates
+---Longest Common Substring
+---Remove Duplicates
 Form a Palindrome
 Longest Distinct Characters in the string
 Implement Atoi
@@ -106,7 +106,7 @@ Serialize and Deserialize a Binary Tree
 
 Heap :
 
-Find median in a stream
+---Find median in a stream
 Heap Sort
 Operations on Binary Min Heap
 Rearrange characters
@@ -149,7 +149,7 @@ Check if frequencies can be equal
 Graph :
 
 Depth First Traversal
-Breadth First Traversal
+---Breadth First Traversal
 Detect cycle in a directed graph
 Topological sort
 Find the number of islands

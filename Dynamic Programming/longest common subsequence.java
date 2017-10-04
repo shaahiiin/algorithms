@@ -14,6 +14,24 @@ class Main {
                     L[i][j] = Math.max(L[i-1][j], L[i][j-1]);
             }
         }
+        StringBuilder sb = new StringBuilder();
+
+        int a = m, b = n;
+
+        while(a > 0 && b > 0){
+            if(X[a-1] == Y[b-1]){
+                sb.insert(0, X[a-1]);
+                a--;
+                b--;
+            } else {
+                if(L[a-1][b] > L[a][b-1])
+                    a--;
+                else
+                    b--;
+            }
+        }
+        System.out.println(sb);
+
         return L[i-1][j-1]; // return last element of the table
     }
 

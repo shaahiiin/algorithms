@@ -1,16 +1,17 @@
 // Find median of elements read so far
 // insertion sort, augmented self-balanced BST (AVL, RB, etc...)
 // Heaps (below implementation)
+// median is stored using int. we can use double as well
 
 import java.util.PriorityQueue;
 import java.util.Collections;
 
-class MedianUsingHeap{
+class MedianOfIntStream{
     private PriorityQueue<Integer> leftHeap;
     private PriorityQueue<Integer> rightHeap;
     protected int median;
 
-    MedianUsingHeap(){
+    MedianOfIntStream(){
         rightHeap = new PriorityQueue<>();
         leftHeap = new PriorityQueue<>(11, Collections.reverseOrder(rightHeap.comparator()));
         median = 0;
@@ -71,7 +72,7 @@ class MedianUsingHeap{
 // Driver code
 class Main{
     public static void main(String[] args){
-        MedianUsingHeap heaps = new MedianUsingHeap();
+        MedianOfIntStream heaps = new MedianOfIntStream();
         int[] arr = new int[]{5, 15, 1, 3, 2, 8, 7, 9, 10, 6, 11, 4};
         for(int i = 0; i < arr.length; i++){
             heaps.insert(arr[i]);

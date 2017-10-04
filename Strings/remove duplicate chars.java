@@ -15,8 +15,8 @@ class Main{
 			else if(alpha[ch - 'a'] > 0){
 				continue;
 			} else {
-				alpha[ch - 'a']++;
 				sb.append(ch);
+				alpha[ch - 'a']++;
 			}
 		}
 		return sb.toString();
