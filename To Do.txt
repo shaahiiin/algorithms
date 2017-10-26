@@ -1,4 +1,4 @@
-Completed 30/176
+Completed 35/176
 
 Arrays :
 
@@ -107,7 +107,7 @@ Serialize and Deserialize a Binary Tree
 Heap :
 
 ---Find median in a stream
-Heap Sort
+---Heap Sort
 Operations on Binary Min Heap
 Rearrange characters
 Kth largest element in a stream
@@ -189,7 +189,7 @@ Geek collects the balls
 Dynamic Programming :
 
 Longest Increasing Subsequence
-Longest Common Subsequence
+---Longest Common Subsequence
 0 – 1 Knapsack Problem
 Minimum number of jumps
 Edit Distance
